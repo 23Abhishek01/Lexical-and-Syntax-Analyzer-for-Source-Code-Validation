@@ -9,13 +9,13 @@ OPERATOR [-+*/=]
 PUNCT    [;(){}]
 
 %%
-// Keywords
+
 "if"      { printf("Keyword: %s\n", yytext); return TOKEN_KEYWORD; }
 "else"    { printf("Keyword: %s\n", yytext); return TOKEN_KEYWORD; }
 "print"   { printf("Keyword: %s\n", yytext); return TOKEN_KEYWORD; }
 "int"     { printf("Keyword: %s\n", yytext); return TOKEN_KEYWORD; }  
 
-// Tokens
+
 {DIGIT}    { printf("Number: %s\n", yytext); return TOKEN_NUMBER; }
 {ID}       { printf("Identifier: %s\n", yytext); return TOKEN_IDENTIFIER; }
 {OPERATOR} { printf("Operator: %s\n", yytext); return TOKEN_OPERATOR; }
